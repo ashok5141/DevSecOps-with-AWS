@@ -1,9 +1,9 @@
 # DevSecOps-with-AWS
-Detailed Overview of Implementing DevSecOps with AWS CodeCommit and Pipeline Using Snyk, SonarCloud, and OWASP ZAP
-Introduction
+Implementing DevSecOps with AWS CodeCommit and Pipeline Using Snyk, SonarCloud, and OWASP ZAP
+
 DevSecOps integrates security practices into the DevOps process, ensuring continuous security throughout the software development lifecycle. This overview details the implementation of a DevSecOps pipeline using AWS CodeCommit, AWS CodePipeline, Snyk, SonarCloud, and OWASP ZAP.
 
-Components and Tools
+#AWS Components and Tools
 AWS CodeCommit: A fully managed source control service that hosts secure Git-based repositories.
 AWS CodePipeline: A continuous integration and continuous delivery (CI/CD) service for fast and reliable application and infrastructure updates.
 Snyk: A developer-first security platform that automatically finds and fixes vulnerabilities in code and open-source dependencies.
