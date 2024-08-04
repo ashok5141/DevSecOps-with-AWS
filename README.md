@@ -221,4 +221,4 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
     You can run any path from windows
 
    # Coming Soon
-   Kubernetes Security, More Projects with DevSecOps
+   Kubernetes Security, More Projects with DevSecOps.
