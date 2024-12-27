@@ -141,7 +141,7 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
     
     Integrating SonarCloud with with JIRA dashboard
     
-    ![JIRA_Sonarcloud_Integration_Dashboard.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/18e45da0-b084-4b4d-a8b7-a50446324a3a/05bd7448-dec0-4edf-b9a5-78a6eb3b890e/JIRA_Sonarcloud_Integration_Dashboard.png)
+    ![JIRA_Sonarcloud_Integration_Dashboard.png](https://raw.githubusercontent.com/ashok5141/DevSecOps-with-AWS/refs/heads/main/Security_Reports/JIRA_Sonarcloud_Integration_Dashboard.png)
     
     # AWS Security Services
     
