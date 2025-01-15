@@ -86,8 +86,21 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
 5. **Use Infrastructure as Code (IaC)**:
     - Manage infrastructure using IaC tools like AWS CloudFormation, Terraform, or AWS CDK to ensure consistent and repeatable infrastructure deployment.
     - Example: Add a build stage that validates CloudFormation templates or Terraform scripts for security best practices.
-    
-    ### Snyk
+
+| Technology | Description | Tools |
+| --- | --- | --- |
+|SCA (Software Composition Analysis) |Identifies vulnerabilities in open-source components. |Snyk, Black Duck, WhiteSource (Mend), OWASP Dependency-Check |
+|SAST (Static Application Security Testing) |Analyzes source code for vulnerabilities without executing the application. |SonarQube, Checkmarx, Fortify, Veracode, Snyk Code |
+|DAST (Dynamic Application Security Testing) |Tests running applications for vulnerabilities by simulating attacks. |OWASP ZAP, Burp Suite, AppSpider, Acunetix, Netsparker |
+|CI/CD (Continuous Integration/Continuous Deployment)|Automates software building, testing, and deployment.|Jenkins, GitHub Actions, GitLab CI/CD, CircleCI, Azure DevOps|
+|IaC (Infrastructure as Code) |Automates infrastructure management using code. |Terraform, Ansible, AWS CloudFormation, Pulumi, Chef |
+|WAF (Web Application Firewall) |Protects web applications by filtering and monitoring HTTP traffic. |AWS WAF, Cloudflare WAF, Imperva, ModSecurity, Barracuda WAF |
+|CSPM (Cloud Security Posture Management) |Manages cloud infrastructure security and ensures compliance. |Prisma Cloud, Dome9, Aqua Security, Wiz, Orca Security |
+|IDS/IPS (Intrusion Detection/Prevention Systems) |Monitors and blocks malicious activities on a network. |Snort, Suricata, Zeek (Bro), Palo Alto Threat Prevention |
+|Firewalls |Controls traffic based on predefined security rules. |pfSense, Cisco ASA, Fortinet FortiGate, Palo Alto Networks, Check Point |
+
+
+### Snyk
     
     Snyk is an organization that develops security tools (SaaS) to secure:
     
@@ -98,7 +111,7 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
     
     Insert Snyk in in between - **Source → Snyk → Build**
     
-    ### OWASP ZAP
+### OWASP ZAP
     
     OWASP ZAP is an open-source web application security scanner. It is intended to be used by both those new to application security as well as professional penetration testers. It is one of the most active Open Web Application Security Projects and has given Flagship status. It can scan both:
     
@@ -106,7 +119,7 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
     - API Specifications
     - Mobile Application
     
-    ### Amazon S3
+### Amazon S3
     
     **Amazon Simple Storage Service (S3)** is an object storage service that offers industry-leading scalability, data availability, security, and performance. S3 buckets are containers for storing objects (files). Each bucket can store an unlimited number of objects and can be managed through the AWS Management Console, AWS CLI, SDKs, and REST API.
     **The OWASP ZAP scan results will stored on AWS S3 bucket**
@@ -121,7 +134,7 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
     | Tools | * Fortify  * CodeSonar  * Coverity | * Snyk  * WhiteSource  * Nexus Lifecycle |
     | Example | SAST tool identifies a potential buffer overflow vulnerability in a custom login function | SCA tool identifies a known security vulnerability (Heartbleed) within the OpenSSL library used by the application |
     
-    ## Project Requirement
+## Project Requirement
     
     | Development | Building and Running Tests | Reporting |
     | --- | --- | --- |
@@ -143,9 +156,9 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
     
     ![JIRA_Sonarcloud_Integration_Dashboard.png](https://raw.githubusercontent.com/ashok5141/DevSecOps-with-AWS/refs/heads/main/Security_Reports/JIRA_Sonarcloud_Integration_Dashboard.png)
     
-    # AWS Security Services
+# AWS Security Services
     
-    ### AWS Security Hub
+### AWS Security Hub
     
     **AWS Security Hub** is a comprehensive security service that provides a unified view of your security alerts and compliance status across your AWS environment. It collects, aggregates, and prioritizes security findings from multiple AWS services, partner solutions, and your own custom security products. 
     
@@ -197,7 +210,7 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
         I enable above 3 security standards for AWS resources.
         
     
-    ### AWS Inspector
+### AWS Inspector
     
     Is a automated and continual vulnerability management at scale, That continual scans workloads for software vulnerabilities and unintended network exposure.
     
@@ -214,11 +227,11 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
     
     
     
-    # Terraform
+# Terraform
     
     Downloads terraform for windows. Copy the path in environmental variables,
     
     You can run any path from windows
 
-   # Coming Soon
+# Coming Soon
    Kubernetes Security, More Projects with DevSecOps.
