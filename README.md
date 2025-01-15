@@ -102,8 +102,7 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
 
 ### Snyk
     
-    Snyk is an organization that develops security tools (SaaS) to secure:
-    
+- Snyk is an organization that develops security tools (SaaS) to secure:
     - Source Code
     - Open Source/Third Part libraries
     - Container (Docker, Kubernetes)
@@ -113,113 +112,111 @@ DevSecOps integrates security practices into the DevOps process, ensuring that s
     
 ### OWASP ZAP
     
-    OWASP ZAP is an open-source web application security scanner. It is intended to be used by both those new to application security as well as professional penetration testers. It is one of the most active Open Web Application Security Projects and has given Flagship status. It can scan both:
-    
+- OWASP ZAP is an open-source web application security scanner. It is intended to be used by both those new to application security as well as professional penetration testers. It is one of the most active Open Web Application Security Projects and has given Flagship status. It can scan both:
     - Web Application
     - API Specifications
     - Mobile Application
     
 ### Amazon S3
     
-    **Amazon Simple Storage Service (S3)** is an object storage service that offers industry-leading scalability, data availability, security, and performance. S3 buckets are containers for storing objects (files). Each bucket can store an unlimited number of objects and can be managed through the AWS Management Console, AWS CLI, SDKs, and REST API.
-    **The OWASP ZAP scan results will stored on AWS S3 bucket**
+**Amazon Simple Storage Service (S3)** is an object storage service that offers industry-leading scalability, data availability, security, and performance. S3 buckets are containers for storing objects (files). Each bucket can store an unlimited number of objects and can be managed through the AWS Management Console, AWS CLI, SDKs, and REST API.
+**The OWASP ZAP scan results will stored on AWS S3 bucket**
     
-    In AWS Code build → Edit → Artifacts → Select S3 buckets (It will automatically generate name of S3 bucket).
-    
-    | Feature | Source Code Analysis (SAST) | Software Composition Analysis (SCA) |
-    | --- | --- | --- |
-    | Focus | Internal, custom-written code | External, open-source components and dependencies |
-    | Analysis Method | Scans code for vulnerabilities, coding errors, and security weaknesses | Identifies open-source components, analyzes for known vulnerabilities and license compliance |
-    | Requires Source Code | Yes | May not (can analyze compiled code or binaries in some cases) |
-    | Tools | * Fortify  * CodeSonar  * Coverity | * Snyk  * WhiteSource  * Nexus Lifecycle |
-    | Example | SAST tool identifies a potential buffer overflow vulnerability in a custom login function | SCA tool identifies a known security vulnerability (Heartbleed) within the OpenSSL library used by the application |
+- In AWS Code build → Edit → Artifacts → Select S3 buckets (It will automatically generate name of S3 bucket).
+
+| Feature | Source Code Analysis (SAST) | Software Composition Analysis (SCA) |
+| --- | --- | --- |
+| Focus | Internal, custom-written code | External, open-source components and dependencies |
+| Analysis Method | Scans code for vulnerabilities, coding errors, and security weaknesses | Identifies open-source components, analyzes for known vulnerabilities and license compliance |
+| Requires Source Code | Yes | May not (can analyze compiled code or binaries in some cases) |
+| Tools | * Fortify  * CodeSonar  * Coverity | * Snyk  * WhiteSource  * Nexus Lifecycle |
+| Example | SAST tool identifies a potential buffer overflow vulnerability in a custom login function | SCA tool identifies a known security vulnerability (Heartbleed) within the OpenSSL library used by the application |
     
 ## Project Requirement
     
-    | Development | Building and Running Tests | Reporting |
-    | --- | --- | --- |
-    | Java Code created by developer | Maven - Build Tool | Identifying false positives |
-    |  | Sonar Cloud-SAST |  |
-    |  | SNYK-SCA |  |
-    |  | OWASP ZAP -DAST |  |
+| Development | Building and Running Tests | Reporting |
+| --- | --- | --- |
+| Java Code created by developer | Maven - Build Tool | Identifying false positives |
+|  | Sonar Cloud-SAST |  |
+|  | SNYK-SCA |  |
+|  | OWASP ZAP -DAST |  |
     
-    **End to End  AWS DevSecOps Pipeline (SAST, SCA & DAST) for JAVA Project:**
+**End to End  AWS DevSecOps Pipeline (SAST, SCA & DAST) for JAVA Project:**
     
-    1. Update buildspec.yml
-    2. Update pom.xml
+1. Update buildspec.yml
+2. Update pom.xml
     
     my SNYK token - 4496cf1c-abb9-4e55-bb56-0e769a2e625f
     
-    SonarCloud-Jira Integration:f047e34edb9894bb3e4ef2eac5febfa760da51d7
+SonarCloud-Jira Integration:f047e34edb9894bb3e4ef2eac5febfa760da51d7
     
-    Integrating SonarCloud with with JIRA dashboard
+Integrating SonarCloud with with JIRA dashboard
     
-    ![JIRA_Sonarcloud_Integration_Dashboard.png](https://raw.githubusercontent.com/ashok5141/DevSecOps-with-AWS/refs/heads/main/Security_Reports/JIRA_Sonarcloud_Integration_Dashboard.png)
+![JIRA_Sonarcloud_Integration_Dashboard.png](https://raw.githubusercontent.com/ashok5141/DevSecOps-with-AWS/refs/heads/main/Security_Reports/JIRA_Sonarcloud_Integration_Dashboard.png)
     
 # AWS Security Services
     
 ### AWS Security Hub
     
-    **AWS Security Hub** is a comprehensive security service that provides a unified view of your security alerts and compliance status across your AWS environment. It collects, aggregates, and prioritizes security findings from multiple AWS services, partner solutions, and your own custom security products. 
+**AWS Security Hub** is a comprehensive security service that provides a unified view of your security alerts and compliance status across your AWS environment. It collects, aggregates, and prioritizes security findings from multiple AWS services, partner solutions, and your own custom security products. 
     
-    **Key Features and Capabilities**
+**Key Features and Capabilities**
     
-    1. **Centralized View**: Provides a single place to view and manage security alerts and compliance status across AWS accounts.
-    2. **Automated Compliance Checks**: Continuously runs automated security checks based on industry standards and best practices, such as CIS AWS Foundations Benchmark.
-    3. **Aggregation of Security Findings**: Collects and consolidates security findings from various AWS services and third-party solutions.
-    4. **Insights**: Uses built-in and customizable insights to analyze and prioritize findings.
-    5. **Integration with AWS Services and Partner Solutions**: Integrates seamlessly with AWS services and third-party security tools for comprehensive security management.
-    6. **Remediation Guidance**: Offers actionable remediation guidance to help address security issues. 
+1. **Centralized View**: Provides a single place to view and manage security alerts and compliance status across AWS accounts.
+2. **Automated Compliance Checks**: Continuously runs automated security checks based on industry standards and best practices, such as CIS AWS Foundations Benchmark.
+3. **Aggregation of Security Findings**: Collects and consolidates security findings from various AWS services and third-party solutions.
+4. **Insights**: Uses built-in and customizable insights to analyze and prioritize findings.
+5. **Integration with AWS Services and Partner Solutions**: Integrates seamlessly with AWS services and third-party security tools for comprehensive security management.
+6. **Remediation Guidance**: Offers actionable remediation guidance to help address security issues. 
     
-    **Sub-Services and Integrations**
+**Sub-Services and Integrations**
+    - AWS Security Hub integrates with several AWS services and third-party tools to enhance its capabilities:
     
-    AWS Security Hub integrates with several AWS services and third-party tools to enhance its capabilities:
-    
-    1. **AWS Services**:
+1. **AWS Services**:
         - **Amazon GuardDuty**: Provides intelligent threat detection.
         - **AWS Config**: Monitors and evaluates AWS resource configurations.
         - **Amazon Macie**: Finds and protects sensitive data.
         - **AWS Firewall Manager**: Manages firewall rules across multiple accounts.
         - **AWS Systems Manager**: Provides operational insights and remediation actions.
         - **Amazon Inspector**: Assesses application security and compliance.
-    2. **Third-Party Integrations**:
-        - Security Hub integrates with various third-party security solutions like CrowdStrike, Palo Alto Networks, Splunk, Sumo Logic, and others for extended visibility and threat detection capabilities.
+2. **Third-Party Integrations**:
+    - Security Hub integrates with various third-party security solutions like CrowdStrike, Palo Alto Networks, Splunk, Sumo Logic, and others for extended visibility and threat detection capabilities.
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/18e45da0-b084-4b4d-a8b7-a50446324a3a/5dca3cfb-badb-4ed5-a6b9-c1bb5716d780/Untitled.png)
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/18e45da0-b084-4b4d-a8b7-a50446324a3a/5dca3cfb-badb-4ed5-a6b9-c1bb5716d780/Untitled.png)
         
-        Before starting AWS Security hub need to enable the AWS config service. 
+    - Before starting AWS Security hub need to enable the AWS config service. 
         
-        **AWS Config:** Records and evaluates configurations of your AWS resources, A summarized view of AWS and non-AWS resources and the compliance status of the rules and resources in each AWS Region.
+**AWS Config:** Records and evaluates configurations of your AWS resources, A summarized view of AWS and non-AWS resources and the compliance status of the rules and resources in each AWS Region.
         
-        **AWS Config has 154 (toady 6 July 2024) managed rules for AWS config if any of the rules violated it notify as security concern.**
+**AWS Config has 154 (toady 6 July 2024) managed rules for AWS config if any of the rules violated it notify as security concern.**
         
-        ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/18e45da0-b084-4b4d-a8b7-a50446324a3a/8c2f1a12-15ec-4cfc-904b-4204ba944970/Untitled.png)
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/18e45da0-b084-4b4d-a8b7-a50446324a3a/8c2f1a12-15ec-4cfc-904b-4204ba944970/Untitled.png)
         
-        After starting AWS config, back to the **AWS Security Hub,** here we have 
+After starting AWS config, back to the **AWS Security Hub,** here we have 
         
-        **Security Standards**
+**Security Standards**
         
-        - [x]  Enable AWS Foundational Security Best Practice v1.0.0
-        - [ ]  Enable AWS Resource Tagging Standard v1.0.0
-        - [x]  Enable CIS AWS Foundations Benchmark v1.2.0
-        - [ ]  Enable CIS AWS Foundations Benchmark v1.4.0
-        - [ ]  Enable CIS AWS Foundations Benchmark v3.0.0
-        - [x]  Enable NIST Special Publication 800-53 Revision 5
-        - [ ]  Enable PCI DSS v3.2.1
+    - [x]  Enable AWS Foundational Security Best Practice v1.0.0
+    - [ ]  Enable AWS Resource Tagging Standard v1.0.0
+    - [x]  Enable CIS AWS Foundations Benchmark v1.2.0
+    - [ ]  Enable CIS AWS Foundations Benchmark v1.4.0
+    - [ ]  Enable CIS AWS Foundations Benchmark v3.0.0
+    - [x]  Enable NIST Special Publication 800-53 Revision 5
+    - [ ]  Enable PCI DSS v3.2.1
         
-        I enable above 3 security standards for AWS resources.
+- I enable above 3 security standards for AWS resources.
         
     
 ### AWS Inspector
+
+Is a automated and continual vulnerability management at scale, That continual scans workloads for software vulnerabilities and unintended network exposure.
     
-    Is a automated and continual vulnerability management at scale, That continual scans workloads for software vulnerabilities and unintended network exposure.
+- Automated discovery and continual scanning
+- Single pane of glass for all vulnerabilities
+- Highly contextualized risk score for prioritization
+- Automate vulnerability management workloads
     
-    - Automated discovery and continual scanning
-    - Single pane of glass for all vulnerabilities
-    - Highly contextualized risk score for prioritization
-    - Automate vulnerability management workloads
-    
-    Where as **AWS Guard Duty** check all resources of AWS logs then notify to the user.
+Where as **AWS Guard Duty** check all resources of AWS logs then notify to the user.
     
     ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/18e45da0-b084-4b4d-a8b7-a50446324a3a/d56c70c9-727c-4a5e-a013-722788251c59/Untitled.png)
     
